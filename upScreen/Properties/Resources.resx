@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="The_provided_URL_could_not_be_processed" xml:space="preserve">
+    <value>The provided URL could not be processed.</value>
+  </data>
+  <data name="frmCapture_upScreen_Error" xml:space="preserve">
+    <value>upScreen Error</value>
+  </data>
+  <data name="caption_upScreen" xml:space="preserve">
+    <value>upScreen</value>
+  </data>
+  <data name="frmCapture_Image_height_cannot_be_null" xml:space="preserve">
+    <value>Image height cannot be null</value>
+  </data>
+  <data name="frmCapture_Image_width_cannot_be_null" xml:space="preserve">
+    <value>Image width cannot be null</value>
+  </data>
 </root>

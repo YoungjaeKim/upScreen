@@ -6,7 +6,9 @@ using System.Threading;
 using System.Diagnostics;
 using upScreenLib.LogConsole;
 using upScreen.Forms;
+using upScreen.Properties;
 using upScreenLib;
+using Settings = upScreenLib.Settings;
 
 namespace upScreen
 {
@@ -44,7 +46,7 @@ namespace upScreen
             CaptureControl.UrlCaptureFailed += (o, args) =>
             {
                 // Warn user and exit.
-                MessageBox.Show("The provided URL could not be processed.", "upScreen Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Resources.The_provided_URL_could_not_be_processed, Resources.frmCapture_upScreen_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Common.KillOrWait(true);
             };
         }
@@ -214,9 +216,9 @@ namespace upScreen
                 {
                     if (pbSelection.Size.Width == 0 || pbSelection.Size.Height == 0)
                     {
-                        string errorcase = (MousePosition.X == pbSelection.Location.X) ? "width" : "height";
-                        string msg = string.Format("Image {0} cannot be null", errorcase);
-                        MessageBox.Show(null, msg, "upScreen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        string msg;
+                        msg = MousePosition.X == pbSelection.Location.X ? Resources.frmCapture_Image_width_cannot_be_null : Resources.frmCapture_Image_height_cannot_be_null;
+                        MessageBox.Show(null, msg, Resources.caption_upScreen, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Common.KillOrWait(true);
                         return;
                     }
